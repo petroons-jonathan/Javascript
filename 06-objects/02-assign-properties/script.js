@@ -26,5 +26,23 @@
         os: "linux",
         user: null,
     };
+
+
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        computers.forEach(function(computer) { // function for each element of computer 
+
+        if (computer.available == undefined) { // if it's undefined get the property "available" of defaultProps
+            computer.available = defaultProps.available
+        }
+        if (computer.os == undefined){ // if it's undefined get the property "os" of defaultProps
+            computer.os = defaultProps.os
+        }
+        if (computer.user == undefined) { // if it's undefined get the property "user" of defaultProps
+            computer.user = defaultProps.user
+        }
+    });
+    console.log(computers) // show the computers with the new value
+    });
 })();

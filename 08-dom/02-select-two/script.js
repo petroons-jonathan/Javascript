@@ -11,4 +11,6 @@
 
 (() => {
     // your code here
+    document.querySelector(".target").innerHTML = "owned"; // select with a css selector 
+    
 })();

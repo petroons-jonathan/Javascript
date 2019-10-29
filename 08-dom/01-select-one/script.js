@@ -11,4 +11,5 @@
 
 (() => {
     // your code here
+    document.getElementById("target").innerHTML = "owned"; // document.getElementById("id") to get the element with the "id" and use .innerHTML to change on the HTML
 })();

@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+
+    // voir pour faire autrement plus rapide ???
+    for (i=0; i<5; i++){
+        document.getElementsByClassName("target")[i].innerHTML = "owned";
+    }
+    
 })();

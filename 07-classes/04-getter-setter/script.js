@@ -11,14 +11,14 @@
 
 (() => {
     // your code here
-    class Person {
-        constructor(firstname, lastname){
+    class Person { // declaring a person 
+        constructor(firstname, lastname){ // construct the class person with lastname and firstname
             this.firstname = firstname;
             this.lastname = lastname;
         }
         
         get name(){
-            return `${this.firstname} ${this.lastname}`;
+            return `${this.firstname} ${this.lastname}`; // use a get to return the firstname and the lastname 
         }
         set name(str){
             this.firstname + this.lastname;
@@ -26,11 +26,11 @@
     }
 
     document.getElementById("run").addEventListener("click", function () {
-        let newPerson1 = new Person("Jimi","Hendrix");
+
+        let newPerson1 = new Person("Jimi","Hendrix"); // declare the variable with "Jimi" as firstname and "Hendrix" as lastname
         let newPerson2 = new Person("Sid","Vicious");
 
-        console.log(newPerson1.name);
+        console.log(newPerson1.name); // console log the variable newPerson1 with his value and call the function
         console.log(newPerson2.name);
-        console.log(name)
     })
 })();

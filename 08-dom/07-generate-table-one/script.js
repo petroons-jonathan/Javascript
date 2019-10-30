@@ -11,21 +11,37 @@
 
 (() => {
     // your code here
-
-
-
-
-
-    var nbre_lignes = prompt("saisir le nombre de lignes du tableau") ;
-	if (nbre_lignes >50 ) {ventier =50 ; alert("nombre de lignes limitée à 50"); }
-	document.getElementById("target").innerHTML=("<table>");
-	for (i=0;i<=nbre_lignes; i++)
-	{
-		document.getElementById("target").innerHTML=("<tr>");
-		document.getElementById("target").innerHTML=("<td>col 1 </td>");
-		document.getElementById("target").innerHTML=("</tr>");
-	}
-    document.write("</table>");
     
+    let tableTarget = document.getElementById("target"); // get the element target 
+     
+    let tableElement = document.createElement("table"); // create an element "table"
+    let tableBody = document.createElement("tbody"); // create an element "tbody"
+   
+    // let numberLines = prompt("saisir le nombre de lignes");
 
+    // if (numberLines > 10){
+    //     ventier =10; alert("veuillez saisir un chiffre entre 1 et 10");
+    // }
+
+    for (let i = 0; i < 10; i++) { // loop to get 10 lines
+
+      let row = document.createElement("tr"); // create an elment "table row"
+   
+      for (let j = 0; j < 1; j++) { 
+
+        let cell = document.createElement("td"); 
+        let cellText = document.createTextNode("Line n° "+(i+1)); // get a message for each lines with her number
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+   
+
+      tableBody.appendChild(row); // call the creation of the element
+    }
+   
+
+    tableElement.appendChild(tableBody); // call the creation of the element
+
+    tableTarget.appendChild(tableElement); // call the creation of the element
 })();
+

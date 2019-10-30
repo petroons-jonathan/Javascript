@@ -30,22 +30,22 @@
     // let image_5 = gallery[4];
 
 
-    document.getElementById("next").addEventListener("click", function () {
-        let check = document.getElementById("img");
-        console.log(check);
-        let checkSrc = check.attributes.src.nodeValue;
-        console.log(checkSrc);
+    document.getElementById("next").addEventListener("click", function () { // function on event on click
+        let check = document.getElementById("img"); // get the element "img"
+        console.log(check); // check the object
+        let checkSrc = check.attributes.src.nodeValue; // find the value to compare on the other
+        console.log(checkSrc); // check if the value can be compare
         // décomposer src 
 
-        if(checkSrc == gallery[4]){
-            image.setAttribute("src",gallery[0])
+        if(checkSrc == gallery[4]){  // if the sourcs is the same as the gallery's index 4 
+            image.setAttribute("src",gallery[0]) // change attribute to the index 0
         }
         else {
-            for (let i = 0; i < gallery.length; i++) {
+            for (let i = 0; i < gallery.length; i++) { // loop 
 
                 console.log(gallery[i]);
     
-                if (checkSrc == gallery[i]){
+                if (checkSrc == gallery[i]){ // if the source is the same as the index then attribute the new one 
     
                     image.setAttribute("src",gallery[i+1])
                 }

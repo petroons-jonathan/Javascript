@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    let password = document.getElementById("pass-one").maxLength = "10"; // declaring that the maximum length is 10
+
+   // console.log(password); show the max Lenght of pass one
+
+    let counter = document.getElementById("counter"); // get the element counter
+
+    // console.log(counter);
+
+    document.getElementById("pass-one").addEventListener("input", function(){ // declaring a function on the event "input"
+
+        counter.innerHTML = document.getElementById("pass-one").value.length +"/10"; // the counter change by the innerHTML on the value length
+        
+    })
 })();

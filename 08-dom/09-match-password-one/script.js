@@ -20,7 +20,7 @@
         console.log(password_1); // check the result of .value used twice (for both)
         console.log(password_2);
 
-        function validate(field) { // create a function for the validation 
+        function validate() { // create a function for the validation 
 
         if (password_1 == "" || password_2 == ""){ // if the value of the password 1 is empty or the password 2 is empty
             alert("Veuillez remplir tous les champs");
@@ -32,7 +32,7 @@
             alert("Votre mot de passe est correct")
         }
         else {
-            return false; 
+            return false; // if any condition is true 
         }
     }
     validate(); // call the function 

@@ -10,5 +10,33 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    let txt = document.getElementById("target").innerHTML;
+    let letters = [...txt];
+
+    
+    for(let i=0;i<letters.length; i++){
+        letters[i] = `<span style="visibility:hidden">${letters[i]}</span>`;
+    }
+
+    document.getElementById("target").innerHTML = letters.join('');
+
+    let count = 1;
+   
+    function typewriter(){
+        
+        if(count <= letters.length){
+            let random = 50+ parseInt(Math.random()*100);
+
+            document.querySelector(`#target span:nth-child(${count})`).style.visibility = "visible";
+        
+            setTimeout(typewriter, random);
+            count++
+        }
+        else{
+            console.log("C'est fini");
+        } 
+    }
+
+    typewriter();
 })();
